@@ -7,15 +7,15 @@ A new Flutter project.
 My `diplom_work` Aplication.
 
 <p align="center">
-  <img src="doc/screenshots/sc01.png" width="32%" />
-  <img src="doc/screenshots/sc02.png" width="32%" />
-  <img src="doc/screenshots/sc03_juzas.png" width="32%" />
+  <img src="screenshots/sc01.png" width="32%" />
+  <img src="screenshots/sc02.png" width="32%" />
+  <img src="screenshots/sc03_juzas.png" width="32%" />
 </p>
 
 <p align="center">
-  <img src="doc/screenshots/sc04.png" width="32%" />
-  <img src="doc/screenshots/sc05.png" width="32%" />
-  <img src="doc/screenshots/sc06.png" width="32%" />
+  <img src="screenshots/sc04.png" width="32%" />
+  <img src="screenshots/sc05.png" width="32%" />
+  <img src="screenshots/sc06.png" width="32%" />
 </p>
 
 ### Getting Started
