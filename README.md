@@ -9,7 +9,7 @@ My `diplom_work` Aplication.
 <p align="center">
   <img src="screenshots/sc01.png" width="32%" />
   <img src="screenshots/sc02.png" width="32%" />
-  <img src="screenshots/sc03_juzas.png" width="32%" />
+  <img src="screenshots/sc03.png" width="32%" />
 </p>
 
 <p align="center">
