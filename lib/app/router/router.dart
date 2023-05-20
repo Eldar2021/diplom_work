@@ -9,6 +9,7 @@ class AppRouter {
   static const String main = '/';
   static const String mainHome = '/main-home';
   static const String home = '/home';
+  static const String homeDetail = '/home-detail';
   static const String login = '/login';
   static const String profile = '/profile';
 
@@ -25,6 +26,8 @@ class AppRouter {
         return CupertinoPageRoute(builder: (_) => const MainView());
       case home:
         return CupertinoPageRoute(builder: (_) => const HomeView());
+      case homeDetail:
+        return CupertinoPageRoute(builder: (_) => const HomeDetailView());
       case login:
         return CupertinoPageRoute(builder: (_) => const LoginView());
       case profile:

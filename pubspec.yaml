@@ -20,6 +20,7 @@ dependencies:
   equatable: ^2.0.5
   http: ^0.13.6
   flutter_svg: ^2.0.6
+  markdown_widget: ^2.2.0
 
 dev_dependencies:
   flutter_test:

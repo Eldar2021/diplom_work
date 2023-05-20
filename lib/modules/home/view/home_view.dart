@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:learn_world/app/app.dart';
 
 import 'package:learn_world/components/components.dart';
 import 'package:learn_world/core/core.dart';
@@ -72,6 +73,9 @@ class HomeSuccesView extends StatelessWidget {
                         leading: Text(article.id),
                         title: Text(article.name),
                         trailing: Text(article.locale),
+                        onTap: () {
+                          Navigator.pushNamed(context, AppRouter.homeDetail);
+                        },
                       ),
                     );
                   },
