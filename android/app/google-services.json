@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "730093015617",
+    "project_id": "learn-world-8e6d4",
+    "storage_bucket": "learn-world-8e6d4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:730093015617:android:959f9c467c349ea6656cc0",
+        "android_client_info": {
+          "package_name": "com.example.learn_world"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "730093015617-g6g4atjcod5gu0ji40m1rvm0mq611c0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoDIM7LjeYLZJWPc48UPF1ZohpBFFPTQI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "730093015617-g6g4atjcod5gu0ji40m1rvm0mq611c0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
