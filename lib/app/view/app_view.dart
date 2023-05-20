@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn_world/app/app.dart';
 import 'package:learn_world/core/core.dart';
+import 'package:learn_world/modules/modules.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -13,6 +14,9 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(
           create: (context) => AuthCubit(context.read<AuthService>()),
+        ),
+        BlocProvider(
+          create: (context) => HomeCubit(context.read<ApiService>()),
         ),
       ],
       child: const MetaApp(),

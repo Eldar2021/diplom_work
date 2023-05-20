@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:learn_world/modules/modules.dart';
 
 class MainView extends StatefulWidget {
@@ -12,6 +13,7 @@ class MainView extends StatefulWidget {
 class _MainViewState extends State<MainView> {
   @override
   void initState() {
+    context.read<HomeCubit>().getContents();
     super.initState();
   }
 
