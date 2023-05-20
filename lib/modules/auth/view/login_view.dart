@@ -14,11 +14,7 @@ class LoginView extends StatelessWidget {
       body: BlocListener<AuthCubit, AuthState>(
         listener: (context, state) {
           if (state.user != null) {
-            Navigator.pushNamedAndRemoveUntil<void>(
-              context,
-              AppRouter.home,
-              (route) => false,
-            );
+            Navigator.pushNamedAndRemoveUntil<void>(context, AppRouter.mainHome, (route) => false);
           }
           if (state.error != null) {
             showAboutDialog(context: context);
