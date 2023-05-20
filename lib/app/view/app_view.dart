@@ -15,13 +15,25 @@ class MyApp extends StatelessWidget {
           create: (context) => AuthCubit(context.read<AuthService>()),
         ),
       ],
-      child: MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-          useMaterial3: true,
-        ),
-        home: const SpalshView(),
+      child: const MetaApp(),
+    );
+  }
+}
+
+class MetaApp extends StatelessWidget {
+  const MetaApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
+      ),
+      onGenerateRoute: (settings) => AppRouter.onGenerateRoute(
+        settings,
+        context.read<AuthCubit>().state.user,
       ),
     );
   }

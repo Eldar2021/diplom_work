@@ -7,6 +7,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:learn_world/core/core.dart';
 import 'package:learn_world/firebase_options.dart';
 import 'package:learn_world/app/app.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -15,7 +16,9 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  final authService = AuthService(FirebaseAuth.instance, GoogleSignIn());
+  final pref = await SharedPreferences.getInstance();
+
+  final authService = AuthService(FirebaseAuth.instance, GoogleSignIn(), pref);
 
   runApp(
     MultiRepositoryProvider(
