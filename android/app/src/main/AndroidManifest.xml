@@ -1,7 +1,6 @@
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.diplom_work">
-   <application
-        android:label="diplom_work"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="learn_world"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

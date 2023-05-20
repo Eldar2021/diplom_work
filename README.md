@@ -1,27 +1,16 @@
-# Diplom_work
+# learn_world
 
 A new Flutter project.
 
 ## Getting Started
 
-My `diplom_work` Aplication.
+This project is a starting point for a Flutter application.
 
-<p align="center">
-  <img src="screenshots/sc01.png" width="32%" />
-  <img src="screenshots/sc02.png" width="32%" />
-  <img src="screenshots/sc03.png" width="32%" />
-</p>
+A few resources to get you started if this is your first Flutter project:
 
-<p align="center">
-  <img src="screenshots/sc04.png" width="32%" />
-  <img src="screenshots/sc05.png" width="32%" />
-  <img src="screenshots/sc06.png" width="32%" />
-</p>
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-### Getting Started
-
-## Requirements
-- Dart sdk: ">=2.19.0 <4.0.0"
-- Flutter: "3.7.7"
-- Android: minSdkVersion 17
-- iOS: --ios-language swift, Xcode version >= 14.0.0
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
