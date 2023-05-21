@@ -1,59 +1,98 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn_world/app/app.dart';
 import 'package:learn_world/core/core.dart';
-import 'package:learn_world/l10n/l10n.dart';
+import 'package:learn_world/theme/theme.dart';
+import 'package:learn_world/utils/utils.dart';
 
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final l10n = context.l10n;
     final appCubit = context.watch<AppCubit>();
+    final authCubit = context.watch<AuthCubit>();
     return Scaffold(
       appBar: AppBar(
-        key: const Key('settings-view'),
-        title: Text(l10n.lang),
+        title: ListTile(
+          titleTextStyle: context.titleLarge,
+          title: Text(authCubit.state.isAuthenticated ? authCubit.state.user?.displayName ?? 'Hi' : 'Hello'),
+          subtitle: Text(authCubit.state.user?.email ?? ''),
+          trailing: CircleAvatar(
+            backgroundImage:
+                authCubit.state.user?.photoUrl != null ? NetworkImage(authCubit.state.user!.photoUrl!) : null,
+            child: authCubit.state.user?.photoUrl == null ? Text(authCubit.state.user?.displayName?[0] ?? '') : null,
+          ),
+        ),
       ),
       body: ListView(
+        padding: const EdgeInsets.fromLTRB(14, 20, 14, 40),
         children: [
-          ListTile(
-            key: const Key('settings-language-view'),
-            title: const Text('l10n.profileLang'),
-            subtitle: Text(appCubit.state.currentLocale.languageCode),
-            trailing: const Icon(Icons.arrow_forward_ios),
-            onTap: () => Navigator.pushNamed(context, AppRouter.language),
-          ),
-          ListTile(
-            key: const Key('settings-theme-view'),
-            title: const Text('l10n.profileTheme'),
-            trailing: const Icon(Icons.arrow_forward_ios),
-            onTap: () => Navigator.pushNamed(context, AppRouter.theme),
-          ),
-          ListTile(
-            key: const Key('settings-about-us-view'),
-            title: const Text('l10n.aboutUs'),
-            trailing: const Icon(Icons.arrow_forward_ios),
-            onTap: () => Navigator.pushNamed(context, AppRouter.aboutUs),
-          ),
-          ListTile(
-            key: const Key('settings-feedback-view'),
-            title: const Text('l10n.feedback'),
-            trailing: const Icon(Icons.arrow_forward_ios),
-            onTap: () async => AppLaunch.sendEmail(
-              'eldiiaralmazbekov@gmail.com',
-              snackBarText: 'l10n.feedBackSms',
-              context: context,
+          Card(
+            child: ListTile(
+              title: const Text('l10n.profileLang'),
+              subtitle: Text(appCubit.state.currentLocale.languageCode),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () => Navigator.pushNamed(context, AppRouter.language),
             ),
           ),
-          ListTile(
-            key: const Key('settings-developers-view'),
-            title: const Text('l10n.profileForDevelopers'),
-            trailing: const Icon(Icons.arrow_forward_ios),
-            onTap: () => Navigator.pushNamed(context, AppRouter.developers),
+          Card(
+            child: ListTile(
+              title: const Text('l10n.profileTheme'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () => Navigator.pushNamed(context, AppRouter.theme),
+            ),
           ),
+          Card(
+            child: ListTile(
+              title: const Text('l10n.aboutUs'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () => Navigator.pushNamed(context, AppRouter.aboutUs),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: const Text('l10n.feedback'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () async => AppLaunch.sendEmail(
+                'eldiiaralmazbekov@gmail.com',
+                snackBarText: 'l10n.feedBackSms',
+                context: context,
+              ),
+            ),
+          ),
+          Card(
+            child: ListTile(
+              title: const Text('l10n.profileForDevelopers'),
+              trailing: const Icon(Icons.arrow_forward_ios),
+              onTap: () => Navigator.pushNamed(context, AppRouter.developers),
+            ),
+          ),
+          if (authCubit.state.isAuthenticated)
+            Card(
+              child: ListTile(
+                title: const Text('logout'),
+                trailing: const Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  AppAlert.showConfirmDialog<void>(
+                    title: const Text('Are you sure'),
+                    content: const Text('You want to sign out?'),
+                    context: context,
+                    onOK: () async {
+                      Navigator.pop(context);
+                      unawaited(AppAlert.showLoading(context));
+                      await context.read<AuthCubit>().logout();
+                      if (context.mounted) {
+                        await Navigator.pushNamedAndRemoveUntil<void>(context, AppRouter.login, (route) => false);
+                      }
+                    },
+                  );
+                },
+              ),
+            ),
         ],
       ),
     );

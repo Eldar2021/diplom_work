@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learn_world/app/app.dart';
+import 'package:learn_world/utils/utils.dart';
 
 class LoginView extends StatelessWidget {
   const LoginView({super.key});
@@ -17,7 +18,7 @@ class LoginView extends StatelessWidget {
             Navigator.pushNamedAndRemoveUntil<void>(context, AppRouter.mainHome, (route) => false);
           }
           if (state.error != null) {
-            showAboutDialog(context: context);
+            AppAlert.showErrorDialog(context, errorText: state.error!, buttontext: 'Ok');
           }
         },
         child: Center(

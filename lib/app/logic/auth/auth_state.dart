@@ -15,4 +15,6 @@ class AuthState extends Equatable {
       error: error ?? this.error,
     );
   }
+
+  bool get isAuthenticated => user != null;
 }
