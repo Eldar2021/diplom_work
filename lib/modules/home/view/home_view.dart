@@ -75,7 +75,7 @@ class HomeSuccesView extends StatelessWidget {
                         title: Text(article.name),
                         trailing: Text(article.locale),
                         onTap: () {
-                          Navigator.pushNamed(context, AppRouter.homeDetail);
+                          Navigator.pushNamed(context, AppRouter.homeDetail, arguments: '${e.id}/${article.id}');
                         },
                       ),
                     );

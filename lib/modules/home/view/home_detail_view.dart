@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learn_world/constants/constants.dart';
-import 'package:learn_world/core/core.dart';
 import 'package:markdown_widget/widget/all.dart';
+
+import 'package:learn_world/components/components.dart';
+import 'package:learn_world/core/core.dart';
+import 'package:learn_world/modules/modules.dart';
 
 class HomeDetailView extends StatelessWidget {
   const HomeDetailView({super.key});
@@ -13,18 +15,34 @@ class HomeDetailView extends StatelessWidget {
       appBar: AppBar(
         title: const Text('HomeDetailView'),
       ),
-      body: FutureBuilder(
-        future: context.read<ApiService>().getMDFile('${ApiConst.eldarApiBase}/learn_world/001/001.md'),
-        builder: (ctx, snapshots) {
-          if (snapshots.hasData && snapshots.data != null) {
-            return MarkdownWidget(
-              padding: const EdgeInsets.fromLTRB(14, 20, 14, 40),
-              data: snapshots.data!.$1!,
-            );
+      body: BlocBuilder<DetailCubit, DetailState>(
+        builder: (context, state) {
+          switch (state.fetchStatus) {
+            case FetchStatus.initial:
+              return const InitialWidget();
+            case FetchStatus.loading:
+              return const LoadingWidget();
+            case FetchStatus.success:
+              return DetailSuccessView(state.mdFile ?? '');
+            case FetchStatus.fail:
+              return const CustomErrorWidget();
           }
-          return Text('$snapshots');
         },
       ),
+    );
+  }
+}
+
+class DetailSuccessView extends StatelessWidget {
+  const DetailSuccessView(this.mdFile, {super.key});
+
+  final String mdFile;
+
+  @override
+  Widget build(BuildContext context) {
+    return MarkdownWidget(
+      padding: const EdgeInsets.fromLTRB(14, 20, 14, 40),
+      data: mdFile,
     );
   }
 }
