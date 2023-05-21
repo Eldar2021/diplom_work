@@ -16,9 +16,14 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/github.svg
   SvgGenImage get github => const SvgGenImage('assets/icons/github.svg');
+  SvgGenImage get kgflag => const SvgGenImage('assets/icons/kg.svg');
+  SvgGenImage get ruflag => const SvgGenImage('assets/icons/ru.svg');
+  SvgGenImage get trflag => const SvgGenImage('assets/icons/tr.svg');
+  SvgGenImage get usflag => const SvgGenImage('assets/icons/us.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [github];
+  List<SvgGenImage> get flags => [usflag, kgflag, ruflag, trflag];
 }
 
 class $AssetsImagesGen {

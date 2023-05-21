@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn_world/app/app.dart';
 import 'package:learn_world/core/core.dart';
+
 import 'package:learn_world/theme/theme.dart';
 import 'package:learn_world/utils/utils.dart';
 
@@ -33,7 +34,7 @@ class SettingsView extends StatelessWidget {
         children: [
           Card(
             child: ListTile(
-              title: const Text('l10n.profileLang'),
+              title: const Text('Language'),
               subtitle: Text(appCubit.state.currentLocale.languageCode),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.language),
@@ -41,21 +42,21 @@ class SettingsView extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: const Text('l10n.profileTheme'),
+              title: const Text('Theme'),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.theme),
             ),
           ),
           Card(
             child: ListTile(
-              title: const Text('l10n.aboutUs'),
+              title: const Text('About us'),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.aboutUs),
             ),
           ),
           Card(
             child: ListTile(
-              title: const Text('l10n.feedback'),
+              title: const Text('Contact us'),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () async => AppLaunch.sendEmail(
                 'eldiiaralmazbekov@gmail.com',
@@ -66,7 +67,7 @@ class SettingsView extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: const Text('l10n.profileForDevelopers'),
+              title: const Text('For developers'),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.developers),
             ),
