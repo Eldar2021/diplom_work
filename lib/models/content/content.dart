@@ -4,9 +4,22 @@ class Content {
   const Content({
     required this.id,
     required this.name,
-    this.svgUrl,
     required this.articles,
+    this.svgUrl,
   });
+
+  factory Content.fromJson(Map<String, dynamic> map) {
+    return Content(
+      id: map['id'] as String,
+      name: map['name'] as String,
+      svgUrl: map['svgUrl'] != null ? map['svgUrl'] as String : null,
+      articles: List<Article>.from(
+        (map['articles'] as List<dynamic>).map<Article>(
+          (x) => Article.fromJson(x as Map<String, dynamic>),
+        ),
+      ),
+    );
+  }
 
   final String id;
   final String name;
@@ -20,18 +33,5 @@ class Content {
       'svgUrl': svgUrl,
       'articles': articles.map((x) => x.toJson()).toList(),
     };
-  }
-
-  factory Content.fromJson(Map<String, dynamic> map) {
-    return Content(
-      id: map['id'] as String,
-      name: map['name'] as String,
-      svgUrl: map['svgUrl'] != null ? map['svgUrl'] as String : null,
-      articles: List<Article>.from(
-        (map['articles'] as List<dynamic>).map<Article>(
-          (x) => Article.fromJson(x as Map<String, dynamic>),
-        ),
-      ),
-    );
   }
 }

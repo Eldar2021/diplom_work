@@ -40,7 +40,6 @@ class HomeSuccesView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      initialIndex: 0,
       length: contents.length,
       child: Scaffold(
         appBar: AppBar(
@@ -48,15 +47,17 @@ class HomeSuccesView extends StatelessWidget {
           bottom: TabBar(
             isScrollable: true,
             tabs: contents
-                .map((e) => Tab(
-                      child: Row(
-                        children: [
-                          if (e.svgUrl != null) SvgPicture.network(e.svgUrl!, width: 35, height: 35),
-                          const SizedBox(width: 10),
-                          Text(e.name),
-                        ],
-                      ),
-                    ))
+                .map(
+                  (e) => Tab(
+                    child: Row(
+                      children: [
+                        if (e.svgUrl != null) SvgPicture.network(e.svgUrl!, width: 35, height: 35),
+                        const SizedBox(width: 10),
+                        Text(e.name),
+                      ],
+                    ),
+                  ),
+                )
                 .toList(),
           ),
         ),

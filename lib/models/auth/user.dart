@@ -7,6 +7,16 @@ class User {
     this.email,
   });
 
+  factory User.fromJson(Map<String, dynamic> map) {
+    return User(
+      uid: map['uid'] as String,
+      phoneNumber: map['phoneNumber'] as String?,
+      displayName: map['displayName'] as String?,
+      photoUrl: map['photoUrl'] as String?,
+      email: map['email'] as String?,
+    );
+  }
+
   final String uid;
   final String? phoneNumber;
   final String? displayName;
@@ -21,15 +31,5 @@ class User {
       'photoUrl': photoUrl,
       'email': email,
     };
-  }
-
-  factory User.fromJson(Map<String, dynamic> map) {
-    return User(
-      uid: map['uid'] as String,
-      phoneNumber: map['phoneNumber'] as String?,
-      displayName: map['displayName'] as String?,
-      photoUrl: map['photoUrl'] as String?,
-      email: map['email'] as String?,
-    );
   }
 }

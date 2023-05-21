@@ -5,6 +5,14 @@ class Article {
     required this.locale,
   });
 
+  factory Article.fromJson(Map<String, dynamic> map) {
+    return Article(
+      id: map['id'] as String,
+      name: map['name'] as String,
+      locale: map['locale'] as String,
+    );
+  }
+
   final String id;
   final String name;
   final String locale;
@@ -15,13 +23,5 @@ class Article {
       'name': name,
       'locale': locale,
     };
-  }
-
-  factory Article.fromJson(Map<String, dynamic> map) {
-    return Article(
-      id: map['id'] as String,
-      name: map['name'] as String,
-      locale: map['locale'] as String,
-    );
   }
 }

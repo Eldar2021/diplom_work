@@ -19,7 +19,7 @@ class AuthService {
 
   md.User? init() {
     final userData = _preferences.getString(AppKeys.userCacheKey);
-    if (userData != null) return md.User.fromJson(jsonDecode(userData));
+    if (userData != null) return md.User.fromJson(jsonDecode(userData) as Map<String, dynamic>);
     return null;
   }
 

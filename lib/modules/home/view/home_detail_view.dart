@@ -22,7 +22,7 @@ class HomeDetailView extends StatelessWidget {
               data: snapshots.data!.$1!,
             );
           }
-          return Text("$snapshots");
+          return Text('$snapshots');
         },
       ),
     );
