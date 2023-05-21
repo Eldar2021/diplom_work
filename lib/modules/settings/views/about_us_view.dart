@@ -16,7 +16,7 @@ class AboutUsVuew extends StatelessWidget {
           Text(
             context.l10n.aboutus,
             textAlign: TextAlign.center,
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
           ),
           const SizedBox(height: 20),
           const Text(

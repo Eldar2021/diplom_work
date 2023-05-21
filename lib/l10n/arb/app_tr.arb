@@ -5,10 +5,10 @@
     "loginPleaseSelectLang": "Lütfen bir dil seçin.",
     "next": "İleri",
     "ok": "Tamam",
-    "language": "Язык",
-    "theme": "Тема",
-    "aboutus": "О нас",
-    "contactus": "Связаться с нами",
-    "fordevelopers": "Для разработчиков",
-    "themeinstallation": "Тема орнотуу"
+    "language": "Dil",
+    "theme": "Tema",
+    "aboutus": "Hakkımızda",
+    "contactus": "Bize Ulaşın",
+    "fordevelopers": "Geliştiriciler için",
+    "themeinstallation": "Tema Kurulumu"
 }
