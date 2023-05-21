@@ -25,10 +25,10 @@ class DevelopersView extends StatelessWidget {
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 20),
-            const Text(
+            Text(
               textAlign: TextAlign.justify,
-              'The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+              context.l10n.fordevelopersbody,
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
             ),
             const Spacer(),
             CustomButtonWithIcon(
