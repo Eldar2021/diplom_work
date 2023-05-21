@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn_world/app/app.dart';
+import 'package:learn_world/constants/constants.dart';
 import 'package:learn_world/l10n/l10n.dart';
 
 class LanguageView extends StatelessWidget {
@@ -22,6 +23,7 @@ class LanguageView extends StatelessWidget {
           final locale = AppLocalizations.supportedLocales[index];
           return Card(
             child: ListTile(
+              leading: Assets.icons.flags[index].svg(height: 25),
               title: Text(getLocaleName(locale), locale: locale),
               onTap: () => context.read<AppCubit>().changeLocale(locale.languageCode),
               trailing: appCubit.state.currentLocale == locale

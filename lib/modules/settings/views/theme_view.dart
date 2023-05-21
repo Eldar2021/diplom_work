@@ -12,7 +12,7 @@ class ThemeView extends StatelessWidget {
     final appCubit = context.watch<AppCubit>();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('context.l10n.profileChangeTheme'),
+        title: const Text('Theme Installation'),
         actions: [
           IconButton(
             key: const Key('settings-theme-theme-button'),

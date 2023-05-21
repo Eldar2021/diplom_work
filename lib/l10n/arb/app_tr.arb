@@ -5,11 +5,8 @@
     "loginPleaseSelectLang": "Lütfen bir dil seçin.",
     "next": "İleri",
     "ok": "Tamam",
-    "getWithoutAccount": "Herhangi bir hesap olmadan alın",
-    "wellcome":"Hoş geldin!",
-    "privicy":"Politika Gizliliği",
-    "orloginwith":"----VEYA İLE GİRİŞ YAPIN----"
-    
-
-
+    "getWithoutAccount": "Bir hesap olmadan gir",
+    "wellcome": "Hoş geldin!",
+    "privicy": "Politika Gizliliği",
+    "orloginwith": "----VEYA İLE GİRİŞ YAPIN----"
 }
