@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn_world/app/app.dart';
-import 'package:learn_world/constants/assets/assets.gen.dart';
+import 'package:learn_world/constants/constants.dart';
 import 'package:learn_world/l10n/l10n.dart';
 
 class LanguageView extends StatelessWidget {
