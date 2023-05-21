@@ -27,7 +27,13 @@ class LoginView extends StatelessWidget {
               ElevatedButton(
                 onPressed: context.read<AuthCubit>().signInWithGoogle,
                 child: const Text('Google'),
-              )
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil<void>(context, AppRouter.mainHome, (route) => false);
+                },
+                child: const Text('Get Without any account'),
+              ),
             ],
           ),
         ),
