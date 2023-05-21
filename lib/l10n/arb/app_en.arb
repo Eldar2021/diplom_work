@@ -4,5 +4,9 @@
     "pleaseWait": "Please waiting",
     "loginPleaseSelectLang": "Please select a language.",
     "next": "Next",
-    "ok": "Ok"
+    "ok": "Ok",
+    "getWithoutAccount": "Get Without any account",
+    "wellcome":"Welcome!",
+    "privicy":"Politica Privicy",
+    "orloginwith":"----OR LOG IN WITH----"
 }

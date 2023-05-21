@@ -4,5 +4,12 @@
     "pleaseWait": "Lütfen bekleyin",
     "loginPleaseSelectLang": "Lütfen bir dil seçin.",
     "next": "İleri",
-    "ok": "Tamam"
+    "ok": "Tamam",
+    "getWithoutAccount": "Herhangi bir hesap olmadan alın",
+    "wellcome":"Hoş geldin!",
+    "privicy":"Politika Gizliliği",
+    "orloginwith":"----VEYA İLE GİRİŞ YAPIN----"
+    
+
+
 }
