@@ -11,7 +11,12 @@ class AppRouter {
   static const String home = '/home';
   static const String homeDetail = '/home-detail';
   static const String login = '/login';
+  static const String settingsView = '/settings';
   static const String profile = '/profile';
+  static const String language = '/language';
+  static const String theme = '/theme';
+  static const String developers = '/developers';
+  static const String aboutUs = '/about-us';
 
   static Route<void> onGenerateRoute(RouteSettings settings, User? user) {
     switch (settings.name) {
@@ -30,8 +35,16 @@ class AppRouter {
         return CupertinoPageRoute(builder: (_) => const HomeDetailView());
       case login:
         return CupertinoPageRoute(builder: (_) => const LoginView());
-      case profile:
-        return CupertinoPageRoute(builder: (_) => const ProfileView());
+      case settingsView:
+        return CupertinoPageRoute(builder: (_) => const SettingsView());
+      case language:
+        return CupertinoPageRoute(builder: (_) => const LanguageView());
+      case theme:
+        return CupertinoPageRoute(builder: (_) => const ThemeView());
+      case developers:
+        return CupertinoPageRoute(builder: (_) => const DevelopersView());
+      case aboutUs:
+        return CupertinoPageRoute(builder: (_) => const AboutUsVuew());
       default:
         throw Exception('no builder specified for route named: [${settings.name}]');
     }

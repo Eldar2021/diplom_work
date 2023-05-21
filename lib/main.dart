@@ -17,14 +17,15 @@ void main() async {
   );
 
   final pref = await SharedPreferences.getInstance();
-
-  final authService = AuthService(FirebaseAuth.instance, GoogleSignIn(), pref);
+  final auth = FirebaseAuth.instance;
+  final googleSign = GoogleSignIn();
 
   runApp(
     MultiRepositoryProvider(
       providers: [
-        RepositoryProvider(create: (context) => authService),
+        RepositoryProvider(create: (context) => AuthService(auth, googleSign, pref)),
         RepositoryProvider(create: (context) => ApiService()),
+        RepositoryProvider(create: (context) => AppService(pref)),
       ],
       child: const MyApp(),
     ),

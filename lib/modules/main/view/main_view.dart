@@ -23,8 +23,8 @@ class _MainViewState extends State<MainView> {
       create: (context) => MainCubit(),
       child: const MainScreen([
         HomeView(),
-        ProfileView(),
         HomeView(),
+        SettingsView(),
       ]),
     );
   }
