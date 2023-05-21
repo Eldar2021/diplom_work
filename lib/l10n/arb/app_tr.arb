@@ -4,5 +4,11 @@
     "pleaseWait": "Lütfen bekleyin",
     "loginPleaseSelectLang": "Lütfen bir dil seçin.",
     "next": "İleri",
-    "ok": "Tamam"
+    "ok": "Tamam",
+    "language": "Язык",
+    "theme": "Тема",
+    "aboutus": "О нас",
+    "contactus": "Связаться с нами",
+    "fordevelopers": "Для разработчиков",
+    "themeinstallation": "Тема орнотуу"
 }

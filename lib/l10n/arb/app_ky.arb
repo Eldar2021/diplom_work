@@ -4,5 +4,11 @@
     "pleaseWait": "Күтө турунуз",
     "loginPleaseSelectLang": "Тилди тандаңыз.",
     "next": "Кийинки",
-    "ok": "Макул"
+    "ok": "Макул",
+    "language": "Тил",
+    "theme": "Тема",
+    "aboutus": "Биз жөнүндө",
+    "contactus": "Биз менен байланыш",
+    "fordevelopers": "Иштеп чыгуучулар үчүн",
+    "themeinstallation": "Тема орнотуу"
 }

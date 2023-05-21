@@ -4,5 +4,11 @@
     "pleaseWait": "Пожалуйста, подождите",
     "loginPleaseSelectLang": "Пожалуйста, выберите язык.",
     "next": "Далее",
-    "ok": "Да"
+    "ok": "Да",
+    "language": "Язык",
+    "theme": "Тема",
+    "aboutus": "О нас",
+    "contactus": "Связаться с нами",
+    "fordevelopers": "Для разработчиков",
+    "themeinstallation": "Установка темы"
 }

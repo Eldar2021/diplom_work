@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn_world/app/app.dart';
+import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/theme/theme.dart';
 
 class ThemeView extends StatelessWidget {
@@ -12,7 +13,7 @@ class ThemeView extends StatelessWidget {
     final appCubit = context.watch<AppCubit>();
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Theme Installation'),
+        title: Text(context.l10n.themeinstallation),
         actions: [
           IconButton(
             key: const Key('settings-theme-theme-button'),

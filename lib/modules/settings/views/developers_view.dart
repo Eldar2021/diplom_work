@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:learn_world/components/components.dart';
 import 'package:learn_world/constants/constants.dart';
 import 'package:learn_world/core/core.dart';
+import 'package:learn_world/l10n/l10n.dart';
 
 class DevelopersView extends StatelessWidget {
   const DevelopersView({super.key});
@@ -12,16 +13,16 @@ class DevelopersView extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: const Text('For developers'),
+        title: Text(context.l10n.fordevelopers),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 20),
         child: Column(
           children: [
-            const Text(
-              'For developers',
+            Text(
+              context.l10n.fordevelopers,
               textAlign: TextAlign.center,
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+              style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 20),
             const Text(

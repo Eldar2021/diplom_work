@@ -5,6 +5,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:learn_world/app/app.dart';
 import 'package:learn_world/core/core.dart';
+import 'package:learn_world/l10n/l10n.dart';
 
 import 'package:learn_world/theme/theme.dart';
 import 'package:learn_world/utils/utils.dart';
@@ -34,7 +35,7 @@ class SettingsView extends StatelessWidget {
         children: [
           Card(
             child: ListTile(
-              title: const Text('Language'),
+              title: Text(context.l10n.language),
               subtitle: Text(appCubit.state.currentLocale.languageCode),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.language),
@@ -42,21 +43,21 @@ class SettingsView extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: const Text('Theme'),
+              title: Text(context.l10n.theme),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.theme),
             ),
           ),
           Card(
             child: ListTile(
-              title: const Text('About us'),
+              title: Text(context.l10n.aboutus),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.aboutUs),
             ),
           ),
           Card(
             child: ListTile(
-              title: const Text('Contact us'),
+              title: Text(context.l10n.contactus),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () async => AppLaunch.sendEmail(
                 'eldiiaralmazbekov@gmail.com',
@@ -67,7 +68,7 @@ class SettingsView extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: const Text('For developers'),
+              title: Text(context.l10n.fordevelopers),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.developers),
             ),

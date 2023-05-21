@@ -4,5 +4,11 @@
     "pleaseWait": "Please waiting",
     "loginPleaseSelectLang": "Please select a language.",
     "next": "Next",
-    "ok": "Ok"
+    "ok": "Ok",
+    "language": "Language",
+    "theme": "Theme",
+    "aboutus": "About us",
+    "contactus": "Contact us",
+    "fordevelopers": "For developers",
+    "themeinstallation": "Theme Installation"
 }
