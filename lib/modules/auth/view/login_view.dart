@@ -15,16 +15,6 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          context.l10n.wellcome,
-          style: context.titleLarge!.copyWith(
-            color: context.colors.primary,
-            fontSize: 36,
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: BlocListener<AuthCubit, AuthState>(
         listener: (context, state) {
           if (state.user != null) {
@@ -38,6 +28,14 @@ class LoginView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Assets.images.codelab.image(),
+            const SizedBox(height: 35),
+            Text(
+              context.l10n.wellcome,
+              style: context.titleLarge!.copyWith(
+                color: context.colors.primary,
+                fontSize: 36,
+              ),
+            ),
             const Spacer(),
             CustomButtonWithIcon(
               icon: Icon(FontAwesomeIcons.google, color: context.colors.primary),
@@ -54,7 +52,6 @@ class LoginView extends StatelessWidget {
             CustomButtonWithIcon(
               icon: Icon(Icons.apple, color: context.colors.primary),
               text: 'Apple',
-              onPressed: () {},
             ),
             const Spacer(),
             CustomButton(

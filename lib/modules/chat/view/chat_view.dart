@@ -24,7 +24,7 @@ class _ChatViewState extends State<ChatView> with AutomaticKeepAliveClientMixin 
     super.build(context);
     return Scaffold(
       appBar: AppBar(
-        title: const Text('ChatView'),
+        title: const Text('Chat GPT'),
       ),
       body: WebViewWidget(controller: controller),
     );

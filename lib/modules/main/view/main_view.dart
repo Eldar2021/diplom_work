@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/modules/modules.dart';
 
 class MainView extends StatefulWidget {
@@ -42,18 +43,18 @@ class MainScreen extends StatelessWidget {
       bottomNavigationBar: NavigationBar(
         onDestinationSelected: context.read<MainCubit>().change,
         selectedIndex: context.watch<MainCubit>().state,
-        destinations: const [
+        destinations: [
           NavigationDestination(
-            icon: Icon(Icons.home),
-            label: 'Home',
+            icon: const Icon(Icons.home),
+            label: context.l10n.home,
           ),
           NavigationDestination(
-            icon: Icon(Icons.workspaces_outlined),
-            label: 'Ai',
+            icon: const Icon(Icons.workspaces_outlined),
+            label: context.l10n.ai,
           ),
           NavigationDestination(
-            icon: Icon(Icons.person_3_rounded),
-            label: 'Profile',
+            icon: const Icon(Icons.person_3_rounded),
+            label: context.l10n.profile,
           ),
         ],
       ),
