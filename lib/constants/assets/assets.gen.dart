@@ -29,11 +29,11 @@ class $AssetsIconsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
-  /// File path: assets/images/first.png
-  AssetGenImage get first => const AssetGenImage('assets/images/first.png');
+  /// File path: assets/images/codelab.png
+  AssetGenImage get codelab => const AssetGenImage('assets/images/codelab.png');
 
   /// List of all assets
-  List<AssetGenImage> get values => [first];
+  List<AssetGenImage> get values => [codelab];
 }
 
 class Assets {

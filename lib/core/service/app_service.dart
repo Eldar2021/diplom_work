@@ -12,12 +12,12 @@ class AppService {
   final SharedPreferences preferences;
 
   (Locale, CustomTheme) init() {
-    // ignore: deprecated_member_use
-    final localeCode = preferences.getString(AppKeys.userCacheKey) ?? window.locale.languageCode;
+    final localeCode = preferences.getString(AppKeys.localeKey);
     final isDark = preferences.getBool(AppKeys.themeModeKey) ?? false;
     final colorIndex = preferences.getInt(AppKeys.themeColorKey) ?? 0;
     return (
-      Locale(localeCode),
+      // ignore: deprecated_member_use
+      Locale(localeCode ?? window.locale.languageCode),
       CustomTheme(
         isDark ? Brightness.dark : Brightness.light,
         targetColors[colorIndex] ?? Colors.red,
