@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:learn_world/l10n/l10n.dart';
 import 'package:markdown_widget/widget/all.dart';
 
 import 'package:learn_world/components/components.dart';
@@ -13,7 +14,7 @@ class HomeDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeDetailView'),
+        title: Text(context.l10n.hi),
       ),
       body: BlocBuilder<DetailCubit, DetailState>(
         builder: (context, state) {

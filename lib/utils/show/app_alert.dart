@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:learn_world/l10n/l10n.dart';
 
+import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/theme/theme.dart';
 
 class AppAlert {
@@ -35,9 +35,9 @@ class AppAlert {
               child: CupertinoActivityIndicator(color: context.colors.primary, radius: 16),
             ),
           ),
-          content: const Text(
-            'context.l10n.pleaseWait',
-            style: TextStyle(fontSize: 18),
+          content: Text(
+            context.l10n.pleaseWait,
+            style: const TextStyle(fontSize: 18),
             textAlign: TextAlign.center,
           ),
         );

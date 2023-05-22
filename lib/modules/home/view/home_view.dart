@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:learn_world/app/app.dart';
 
+import 'package:learn_world/app/app.dart';
 import 'package:learn_world/components/components.dart';
 import 'package:learn_world/core/core.dart';
+import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/models/models.dart';
 import 'package:learn_world/modules/modules.dart';
+import 'package:learn_world/theme/theme.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -43,9 +45,13 @@ class HomeSuccesView extends StatelessWidget {
       length: contents.length,
       child: Scaffold(
         appBar: AppBar(
-          title: const Text('HomeView'),
+          title: Text(context.l10n.home),
           bottom: TabBar(
             isScrollable: true,
+            indicatorWeight: 2.5,
+            indicatorColor: context.colors.primary,
+            labelColor: context.colors.onSurfaceVariant,
+            labelStyle: context.titleMedium!.copyWith(fontWeight: FontWeight.bold),
             tabs: contents
                 .map(
                   (e) => Tab(
