@@ -6,7 +6,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:learn_world/app/app.dart';
 import 'package:learn_world/core/core.dart';
 import 'package:learn_world/l10n/l10n.dart';
-
 import 'package:learn_world/theme/theme.dart';
 import 'package:learn_world/utils/utils.dart';
 
@@ -21,7 +20,9 @@ class SettingsView extends StatelessWidget {
       appBar: AppBar(
         title: ListTile(
           titleTextStyle: context.titleLarge,
-          title: Text(authCubit.state.isAuthenticated ? authCubit.state.user?.displayName ?? 'Hi' : 'Hello'),
+          title: Text(
+            authCubit.state.isAuthenticated ? authCubit.state.user?.displayName ?? context.l10n.hi : context.l10n.hello,
+          ),
           subtitle: Text(authCubit.state.user?.email ?? ''),
           trailing: CircleAvatar(
             backgroundImage:
@@ -50,25 +51,25 @@ class SettingsView extends StatelessWidget {
           ),
           Card(
             child: ListTile(
-              title: Text(context.l10n.aboutus),
+              title: Text(context.l10n.aboutUs),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.aboutUs),
             ),
           ),
           Card(
             child: ListTile(
-              title: Text(context.l10n.contactus),
+              title: Text(context.l10n.contactUs),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () async => AppLaunch.sendEmail(
                 'eldiiaralmazbekov@gmail.com',
-                snackBarText: 'l10n.feedBackSms',
+                snackBarText: context.l10n.hello,
                 context: context,
               ),
             ),
           ),
           Card(
             child: ListTile(
-              title: Text(context.l10n.fordevelopers),
+              title: Text(context.l10n.forDevelopers),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () => Navigator.pushNamed(context, AppRouter.developers),
             ),
@@ -76,12 +77,12 @@ class SettingsView extends StatelessWidget {
           if (authCubit.state.isAuthenticated)
             Card(
               child: ListTile(
-                title: const Text('logout'),
+                title: Text(context.l10n.signout),
                 trailing: const Icon(Icons.arrow_forward_ios),
                 onTap: () {
                   AppAlert.showConfirmDialog<void>(
-                    title: const Text('Are you sure'),
-                    content: const Text('You want to sign out?'),
+                    title: Text(context.l10n.areYouSure),
+                    content: Text(context.l10n.signoutConfirm),
                     context: context,
                     onOK: () async {
                       Navigator.pop(context);

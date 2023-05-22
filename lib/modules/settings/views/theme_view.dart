@@ -13,10 +13,9 @@ class ThemeView extends StatelessWidget {
     final appCubit = context.watch<AppCubit>();
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.l10n.themeinstallation),
+        title: Text(context.l10n.themeInstallation),
         actions: [
           IconButton(
-            key: const Key('settings-theme-theme-button'),
             onPressed: () {
               context.read<AppCubit>().changeThemeMode(
                     isDark: context.read<AppCubit>().state.theme.brightness == Brightness.light,
@@ -35,10 +34,7 @@ class ThemeView extends StatelessWidget {
           final targetColor = targetColors[index];
           return Card(
             child: ListTile(
-              leading: Icon(
-                Icons.color_lens_rounded,
-                color: targetColor,
-              ),
+              leading: Icon(Icons.color_lens_rounded, color: targetColor),
               title: Text(targetColor?.value.toString() ?? ''),
               onTap: () => targetColor != null ? context.read<AppCubit>().changePrimaryColor(index, targetColor) : {},
             ),

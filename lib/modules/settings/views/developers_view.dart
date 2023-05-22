@@ -13,21 +13,21 @@ class DevelopersView extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
     return Scaffold(
       appBar: AppBar(
-        title: Text(context.l10n.fordevelopers),
+        title: Text(context.l10n.forDevelopers),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 20),
         child: Column(
           children: [
             Text(
-              context.l10n.fordevelopers,
+              context.l10n.forDevelopers,
               textAlign: TextAlign.center,
               style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
             ),
             const SizedBox(height: 20),
             Text(
               textAlign: TextAlign.justify,
-              context.l10n.fordevelopersbody,
+              context.l10n.forDevelopersBody,
               style: const TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
             ),
             const Spacer(),
