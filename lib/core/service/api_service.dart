@@ -13,7 +13,7 @@ class ApiService {
   Future<(String? md, String status)> getMDFile(String url) async {
     try {
       final uri = Uri.parse(url);
-      final response = await _client.get(uri, headers: _getRequestHeaders());
+      final response = await _client.get(uri);
       if (response.statusCode != HttpStatus.ok) {
         return (null, '${response.statusCode}');
       }

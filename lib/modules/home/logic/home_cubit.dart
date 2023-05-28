@@ -21,4 +21,8 @@ class HomeCubit extends Cubit<HomeState> {
     if (contents == null) return emit(state.copyWith(fetchStatus: FetchStatus.fail, stutus: status));
     emit(state.copyWith(contents: contents, stutus: status, fetchStatus: FetchStatus.success));
   }
+
+  void changeLocale(MyLocale myLocale) {
+    emit(state.copyWith(myLocale: myLocale));
+  }
 }

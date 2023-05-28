@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 
-import 'package:learn_world/app/app.dart';
 import 'package:learn_world/components/components.dart';
 import 'package:learn_world/core/core.dart';
 import 'package:learn_world/l10n/l10n.dart';
@@ -41,6 +40,7 @@ class HomeSuccesView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final homeCubit = context.watch<HomeCubit>();
     return DefaultTabController(
       length: contents.length,
       child: Scaffold(
@@ -59,7 +59,7 @@ class HomeSuccesView extends StatelessWidget {
                       children: [
                         if (e.svgUrl != null) SvgPicture.network(e.svgUrl!, width: 35, height: 35),
                         const SizedBox(width: 10),
-                        Text(e.name),
+                        Text(e.getName(homeCubit.state.myLocale)),
                       ],
                     ),
                   ),
@@ -71,17 +71,28 @@ class HomeSuccesView extends StatelessWidget {
           children: contents
               .map(
                 (e) => ListView.builder(
-                  padding: const EdgeInsets.fromLTRB(14, 25, 14, 40),
+                  padding: const EdgeInsets.fromLTRB(14, 25, 14, 90),
                   itemCount: e.articles.length,
                   itemBuilder: (BuildContext context, int index) {
                     final article = e.articles[index];
                     return Card(
                       child: ListTile(
                         leading: Text(article.id),
-                        title: Text(article.name),
-                        trailing: Text(article.locale),
+                        title: Text(article.getName(homeCubit.state.myLocale)),
                         onTap: () {
-                          Navigator.pushNamed(context, AppRouter.homeDetail, arguments: '${e.id}/${article.id}');
+                          Navigator.push<void>(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (BuildContext context) => BlocProvider(
+                                create: (context) => DetailCubit(
+                                  context.read<ApiService>(),
+                                  '${e.id}/${article.id}',
+                                  context.read<HomeCubit>().state.myLocale,
+                                )..getData(),
+                                child: const HomeDetailView(),
+                              ),
+                            ),
+                          );
                         },
                       ),
                     );
@@ -89,6 +100,9 @@ class HomeSuccesView extends StatelessWidget {
                 ),
               )
               .toList(),
+        ),
+        floatingActionButton: ArticleLocale(
+          onSelected: (v) => context.read<HomeCubit>().changeLocale(v),
         ),
       ),
     );

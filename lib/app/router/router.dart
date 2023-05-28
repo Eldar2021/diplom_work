@@ -1,6 +1,4 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:learn_world/core/core.dart';
 
 import 'package:learn_world/models/models.dart';
 import 'package:learn_world/modules/modules.dart';
@@ -11,7 +9,6 @@ class AppRouter {
   static const String main = '/';
   static const String mainHome = '/main-home';
   static const String home = '/home';
-  static const String homeDetail = '/home-detail';
   static const String login = '/login';
   static const String settingsView = '/settings';
   static const String profile = '/profile';
@@ -34,14 +31,6 @@ class AppRouter {
         return CupertinoPageRoute(builder: (_) => const MainView());
       case home:
         return CupertinoPageRoute(builder: (_) => const HomeView());
-      case homeDetail:
-        return CupertinoPageRoute(
-          builder: (_) => BlocProvider(
-            create: (context) =>
-                DetailCubit(context.read<ApiService>(), (settings.arguments as String?) ?? '')..getData(),
-            child: const HomeDetailView(),
-          ),
-        );
       case login:
         return CupertinoPageRoute(builder: (_) => const LoginView());
       case settingsView:
