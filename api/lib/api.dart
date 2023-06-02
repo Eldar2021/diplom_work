@@ -3,13 +3,13 @@ import 'package:http/http.dart' as http;
 
 const String baseUrl = 'https://paste.rs/';
 
-Future<String> createPaste(String fileName) async {
-  final data = await File('./data/$fileName.md').readAsString();
+Future<String> createPaste({required String uploadFile, required String downloadFile}) async {
+  final data = await File(uploadFile).readAsString();
   final response = await http.post(Uri.parse(baseUrl), body: data);
 
   if (response.statusCode == 201) {
-    await File('./data/sources.md').writeAsString(
-      '\n$fileName-${response.body}',
+    await File(downloadFile).writeAsString(
+      '\n$uploadFile-${response.body}',
       mode: FileMode.append,
     );
     return response.body;
