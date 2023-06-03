@@ -7,4 +7,9 @@
 ./data/tr/001/6.md-https://paste.rs/EeMAk
 ./data/tr/001/7.md-https://paste.rs/Whjcf
 ./data/tr/001/8.md-https://paste.rs/Ls0vk
-./data/tr/001/9.md-https://paste.rs/WaMmg
+./data/tr/001/9.md-https://paste.rs/fjiKw
+./data/tr/001/10.md-https://paste.rs/PVHt9
+./data/tr/001/11.md-https://paste.rs/m80c1
+./data/tr/001/12.md-https://paste.rs/ox4Ut
+./data/tr/001/13.md-https://paste.rs/XtVfF
+./data/tr/001/14.md-https://paste.rs/eMgzQ
