@@ -21,7 +21,7 @@ class DetailCubit extends Cubit<DetailState> {
   Future<void> getData() async {
     emit(state.copyWith(fetchStatus: FetchStatus.loading));
     final (data, status) = await apiService.getMDFile(
-      '${ApiConst.eldarApiBase}/learn_world/data/${state.myLocale.locale.languageCode}/$path.md',
+      '${ApiConst.rocketBase}/$path',
     );
     if (data != null) return emit(state.copyWith(mdFile: data, status: status, fetchStatus: FetchStatus.success));
     return emit(state.copyWith(fetchStatus: FetchStatus.fail, status: status));

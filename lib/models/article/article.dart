@@ -2,7 +2,7 @@ import 'package:learn_world/models/models.dart';
 
 class Article {
   const Article({
-    required this.id,
+    required this.ids,
     required this.en,
     required this.ky,
     required this.ru,
@@ -11,7 +11,7 @@ class Article {
 
   factory Article.fromJson(Map<String, dynamic> map) {
     return Article(
-      id: map['id'] as String,
+      ids: List<String>.from(map['id'] as List<dynamic>),
       en: map['en'] as String,
       ky: map['ky'] as String,
       ru: map['ru'] as String,
@@ -20,10 +20,10 @@ class Article {
   }
 
   Map<String, dynamic> toJson() {
-    return <String, dynamic>{'id': id, 'en': en, 'ky': ky, 'ru': ru, 'tr': tr};
+    return <String, dynamic>{'id': ids, 'en': en, 'ky': ky, 'ru': ru, 'tr': tr};
   }
 
-  final String id;
+  final List<String> ids;
   final String en;
   final String ky;
   final String ru;

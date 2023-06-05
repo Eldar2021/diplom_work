@@ -77,7 +77,6 @@ class HomeSuccesView extends StatelessWidget {
                     final article = e.articles[index];
                     return Card(
                       child: ListTile(
-                        leading: Text(article.id),
                         title: Text(article.getName(homeCubit.state.myLocale)),
                         onTap: () {
                           Navigator.push<void>(
@@ -86,7 +85,7 @@ class HomeSuccesView extends StatelessWidget {
                               builder: (BuildContext context) => BlocProvider(
                                 create: (context) => DetailCubit(
                                   context.read<ApiService>(),
-                                  '${e.id}/${article.id}',
+                                  article.ids[context.read<HomeCubit>().state.myLocale.index],
                                   context.read<HomeCubit>().state.myLocale,
                                 )..getData(),
                                 child: const HomeDetailView(),
