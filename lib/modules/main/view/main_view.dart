@@ -15,6 +15,7 @@ class _MainViewState extends State<MainView> {
   @override
   void initState() {
     context.read<HomeCubit>().getContents();
+    context.read<TopicsCubit>().getTopics();
     super.initState();
   }
 

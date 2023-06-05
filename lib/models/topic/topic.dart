@@ -14,7 +14,7 @@ class Topic {
       title: map['title'] as String,
       authorName: map['authorName'] as String,
       authorEmail: map['authorEmail'] as String,
-      dateTime: DateTime.fromMillisecondsSinceEpoch(map['dateTime'] as int),
+      dateTime: map['dateTime'] as String,
       locale: map['locale'] as String,
     );
   }
@@ -25,7 +25,7 @@ class Topic {
       'title': title,
       'authorName': authorName,
       'authorEmail': authorEmail,
-      'dateTime': dateTime.millisecondsSinceEpoch,
+      'dateTime': dateTime,
       'locale': locale,
     };
   }
@@ -34,6 +34,6 @@ class Topic {
   final String title;
   final String authorName;
   final String authorEmail;
-  final DateTime dateTime;
+  final String dateTime;
   final String locale;
 }

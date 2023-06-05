@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => AppCubit(context.read<AppService>())),
         BlocProvider(create: (context) => AuthCubit(context.read<AuthService>())),
         BlocProvider(create: (context) => HomeCubit(context.read<ApiService>())),
+        BlocProvider(create: (context) => TopicsCubit(context.read<ApiService>())),
       ],
       child: const MetaApp(),
     );
