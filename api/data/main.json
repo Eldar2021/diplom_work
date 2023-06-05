@@ -1,0 +1,1079 @@
+[
+    {
+        "id": "001",
+        "en": "Dart Basic",
+        "ky": "Dart Базасы",
+        "ru": "Основы Dart",
+        "tr": "Dart Temel",
+        "svgUrl": "https://raw.githubusercontent.com/Eldar2021/eldar2021.github.io/22a9444e64f0b9ec9800733e25a915660490e4f0/learn_world/icons/dart.svg",
+        "articles": [
+            {
+                "id": [
+                    "9Johu",
+                    "7EsEj",
+                    "QbC0T",
+                    "NeI93"
+                ],
+                "en": "What is dart",
+                "ky": "Dart недир",
+                "ru": "Что такое Dart",
+                "tr": "Dart Nedir"
+            },
+            {
+                "id": [
+                    "dFZzn",
+                    "lMxBm",
+                    "LOaVk",
+                    "f7gBE"
+                ],
+                "en": "Hello World",
+                "ky": "Салам, Дүйнө!",
+                "ru": "Привет, мир!",
+                "tr": "Merhaba Dünya"
+            },
+            {
+                "id": [
+                    "G4uKr",
+                    "Nu8mb",
+                    "ol1pC",
+                    "ZoyYP"
+                ],
+                "en": "Variables",
+                "ky": "Өзгөчөлүктөр",
+                "ru": "Переменные",
+                "tr": "Değişkenler"
+            },
+            {
+                "id": [
+                    "0U3Vy",
+                    "gtP9R",
+                    "Lgb7h",
+                    "QU6b2"
+                ],
+                "en": "Control flow statements",
+                "ky": "Управление течением операторлору",
+                "ru": "Управляющие конструкции",
+                "tr": "Kontrol akış ifadeleri"
+            },
+            {
+                "id": [
+                    "xASGK",
+                    "3HF58",
+                    "YzaYn",
+                    "nzyUE"
+                ],
+                "en": "Functions",
+                "ky": "Функциялар",
+                "ru": "Функции",
+                "tr": "Fonksiyonlar"
+            },
+            {
+                "id": [
+                    "OkEvt",
+                    "is2sv",
+                    "bFU9e",
+                    "EeMAk"
+                ],
+                "en": "Comments",
+                "ky": "Комментарийлер",
+                "ru": "Комментарии",
+                "tr": "Yorumlar"
+            },
+            {
+                "id": [
+                    "Jd6Z4",
+                    "JFVAm",
+                    "GEpoD",
+                    "Whjcf"
+                ],
+                "en": "Imports",
+                "ky": "Импорттоо",
+                "ru": "Импорт",
+                "tr": "İçe Aktarmalar"
+            },
+            {
+                "id": [
+                    "60Zat",
+                    "Fuuzr",
+                    "2RYWe",
+                    "Ls0vk"
+                ],
+                "en": "Classes",
+                "ky": "Класстар",
+                "ru": "Классы",
+                "tr": "Sınıflar"
+            },
+            {
+                "id": [
+                    "5FJE1",
+                    "haEAC",
+                    "LMHlQ",
+                    "fjiKw"
+                ],
+                "en": "Enums",
+                "ky": "Enums",
+                "ru": "Перечисления",
+                "tr": "Numaralandırmalar"
+            },
+            {
+                "id": [
+                    "PSe0A",
+                    "U2VDa",
+                    "CQ19O",
+                    "PVHt9"
+                ],
+                "en": "Inheritance",
+                "ky": "Мурууттунуу",
+                "ru": "Наследование",
+                "tr": "Kalıtım"
+            },
+            {
+                "id": [
+                    "F4SIL",
+                    "DH7Zi",
+                    "kj2vd",
+                    "m80c1"
+                ],
+                "en": "Mixins",
+                "ky": "Mixins",
+                "ru": "Миксины",
+                "tr": "Mixin'ler"
+            },
+            {
+                "id": [
+                    "KyIb0",
+                    "NVJc7",
+                    "VBkWT",
+                    "ox4Ut"
+                ],
+                "en": "Interfaces and abstract classes",
+                "ky": "Интерфейс жана абстракттардын класстары",
+                "ru": "Интерфейсы и абстрактные классы",
+                "tr": "Arayüzler ve Soyut Sınıflar"
+            },
+            {
+                "id": [
+                    "4xP6P",
+                    "ouUV5",
+                    "2gARg",
+                    "XtVfF"
+                ],
+                "en": "Async",
+                "ky": "Асинк",
+                "ru": "Асинхронность",
+                "tr": "Eşzamansızlık"
+            },
+            {
+                "id": [
+                    "gVGaO",
+                    "Y8O4M",
+                    "objR8",
+                    "eMgzQ"
+                ],
+                "en": "Exceptions",
+                "ky": "Искөөлөр",
+                "ru": "Исключения",
+                "tr": "İstisnalar"
+            }
+        ]
+    },
+    {
+        "id": "002",
+        "en": "Flutter Basic",
+        "ky": "Flutter Базасы",
+        "ru": "Основы Flutter",
+        "tr": "Flutter Temel",
+        "svgUrl": "https://raw.githubusercontent.com/Eldar2021/eldar2021.github.io/22a9444e64f0b9ec9800733e25a915660490e4f0/learn_world/icons/flutter.svg",
+        "articles": [
+            {
+                "id": [
+                    "ok5xc",
+                    "Hd28f",
+                    "s7AYs",
+                    "29mh8"
+                ],
+                "en": "Setup Development Environment",
+                "ky": "Иштөө ортосун туруп салуу",
+                "ru": "Настройка среды разработки",
+                "tr": "Geliştirme Ortamını Kurma"
+            },
+            {
+                "id": [
+                    "SWWos",
+                    "LDrQJ",
+                    "inP5R",
+                    "3Indb"
+                ],
+                "en": "Flutter CLI",
+                "ky": "Flutter CLI",
+                "ru": "Flutter CLI",
+                "tr": "Flutter CLI"
+            },
+            {
+                "id": [
+                    "IvePs",
+                    "DrMQd",
+                    "XTZCo",
+                    "3gTdn"
+                ],
+                "en": "IDEs",
+                "ky": "IDEлер",
+                "ru": "Среды разработки",
+                "tr": "IDE'ler"
+            },
+            {
+                "id": [
+                    "smXNw",
+                    "kpA1g",
+                    "pVubr",
+                    "pwSpG"
+                ],
+                "en": "VS Code",
+                "ky": "VS Code",
+                "ru": "VS Code",
+                "tr": "VS Code"
+            },
+            {
+                "id": [
+                    "dGdiK",
+                    "pfub6",
+                    "CBjYE",
+                    "La5KT"
+                ],
+                "en": "Android Studio",
+                "ky": "Android Studio",
+                "ru": "Android Studio",
+                "tr": "Android Studio"
+            },
+            {
+                "id": [
+                    "bMUMO",
+                    "I1vkr",
+                    "Igb8Z",
+                    "tsm5f"
+                ],
+                "en": "Widgets",
+                "ky": "Widgets",
+                "ru": "Виджеты",
+                "tr": "Widget'lar"
+            },
+            {
+                "id": [
+                    "qQMcz",
+                    "kQWA0",
+                    "XHlYX",
+                    "ngkOa"
+                ],
+                "en": "Inherited Widgets",
+                "ky": "Мынадай Widgetтер",
+                "ru": "Наследуемые виджеты",
+                "tr": "Devralınan Widget'lar"
+            },
+            {
+                "id": [
+                    "91DE5",
+                    "lzBjN",
+                    "O2rAs",
+                    "FEZZi"
+                ],
+                "en": "Stateless Widgets",
+                "ky": "Stateless Widgetтер",
+                "ru": "Stateless виджеты",
+                "tr": "Durumsuz Widget'lar"
+            },
+            {
+                "id": [
+                    "vo2M4",
+                    "XbPa6",
+                    "A7MDj",
+                    "7JJfQ"
+                ],
+                "en": "Stateful widgets",
+                "ky": "Stateful widgetтер",
+                "ru": "Stateful виджеты",
+                "tr": "Durumlu Widget'lar"
+            },
+            {
+                "id": [
+                    "fIjdk",
+                    "Vz79L",
+                    "nhaJW",
+                    "ck351"
+                ],
+                "en": "Styled Widgets",
+                "ky": "Сыйланган виджеттер",
+                "ru": "Оформленные виджеты",
+                "tr": "Stil Verilmiş Widget'lar"
+            },
+            {
+                "id": [
+                    "yeQTs",
+                    "zi25T",
+                    "Ii1Ks",
+                    "ukEhY"
+                ],
+                "en": "Material Widgets",
+                "ky": "Material виджеттер",
+                "ru": "Material виджеты",
+                "tr": "Material Widget'lar"
+            },
+            {
+                "id": [
+                    "Ary5c",
+                    "QW1R9",
+                    "8EFuy",
+                    "jm1S9"
+                ],
+                "en": "Cupertino widgets",
+                "ky": "Cupertino виджеттер",
+                "ru": "Виджеты Cupertino",
+                "tr": "Cupertino Widget'lar"
+            },
+            {
+                "id": [
+                    "N7dCC",
+                    "RgcGh",
+                    "esEiL",
+                    "8XW77"
+                ],
+                "en": "Working with Assets",
+                "ky": "Материалдар менен иштелиңиз",
+                "ru": "Работа с ресурсами",
+                "tr": "Varlıklarla Çalışma"
+            },
+            {
+                "id": [
+                    "qk9jm",
+                    "QwVAZ",
+                    "YYR0P",
+                    "faE1A"
+                ],
+                "en": "Fonts",
+                "ky": "Үлгүлөр",
+                "ru": "Шрифты",
+                "tr": "Yazı Tipleri"
+            },
+            {
+                "id": [
+                    "Ispga",
+                    "QDCFp",
+                    "txZwu",
+                    "IYiLN"
+                ],
+                "en": "Images",
+                "ky": "Сүрөттөр",
+                "ru": "Изображения",
+                "tr": "Görüntüler"
+            },
+            {
+                "id": [
+                    "mXI4a",
+                    "GNdnq",
+                    "VOrcu",
+                    "lGTcI"
+                ],
+                "en": "Other File Types",
+                "ky": "Башка файл түрлөрү",
+                "ru": "Другие типы файлов",
+                "tr": "Diğer Dosya Türleri"
+            }
+        ]
+    },
+    {
+        "id": "003",
+        "en": "Version Control Systems",
+        "ky": "Нускалар контролдөө системалары",
+        "ru": "Системы контроля версий",
+        "tr": "Sürüm Kontrol Sistemleri",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "0gN2d",
+                    "A2t4t",
+                    "eJdno",
+                    "ksfKz"
+                ],
+                "en": "Git",
+                "ky": "Git",
+                "ru": "Git",
+                "tr": "Git"
+            },
+            {
+                "id": [
+                    "s0fvW",
+                    "ugj6y",
+                    "c9Trv",
+                    "mVxFr"
+                ],
+                "en": "Github",
+                "ky": "Github",
+                "ru": "Github",
+                "tr": "Github"
+            }
+        ]
+    },
+    {
+        "id": "004",
+        "en": "Design Principles",
+        "ky": "Дизайндык принциптер",
+        "ru": "Принципы дизайна",
+        "tr": "Tasarım İlkeleri",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "gjvvs",
+                    "MFKi6",
+                    "hrxpH",
+                    "7JmAo"
+                ],
+                "en": "Dependency Injection",
+                "ky": "Байланыштыруу ишкери",
+                "ru": "Внедрение зависимостей",
+                "tr": "Bağımlılık Enjeksiyonu"
+            },
+            {
+                "id": [
+                    "lbjbs",
+                    "M83gj",
+                    "A8l66",
+                    "Ob2TE"
+                ],
+                "en": "Design Patterns",
+                "ky": "Дизайн моддолору",
+                "ru": "Паттерны дизайна",
+                "tr": "Tasarım Kalıpları"
+            },
+            {
+                "id": [
+                    "ey23a",
+                    "1no7C",
+                    "KGCsH",
+                    "qdbTL"
+                ],
+                "en": "SOLID Principles",
+                "ky": "SOLID принциптери",
+                "ru": "Принципы SOLID",
+                "tr": "SOLID İlkeleri"
+            },
+            {
+                "id": [
+                    "DKbTU",
+                    "gucmX",
+                    "hPYWW",
+                    "wOXnu"
+                ],
+                "en": "OOP",
+                "ky": "ООП",
+                "ru": "ООП",
+                "tr": "NES"
+            }
+        ]
+    },
+    {
+        "id": "005",
+        "en": "Package Manager",
+        "ky": "Пакеттер менеджери",
+        "ru": "Менеджер пакетов",
+        "tr": "Paket Yöneticisi",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Pub dev",
+                "ky": "Pub dev",
+                "ru": "Pub dev",
+                "tr": "Pub dev"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Flutter pub dart pub",
+                "ky": "Flutter pub dart pub",
+                "ru": "Flutter pub dart pub",
+                "tr": "Flutter pub dart pub"
+            }
+        ]
+    },
+    {
+        "id": "006",
+        "en": "Working with APIs",
+        "ky": "APIлар менен иштеш",
+        "ru": "Работа с API",
+        "tr": "API'lerle Çalışmak",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Web Sockets",
+                "ky": "Web сокеттери",
+                "ru": "Веб-сокеты",
+                "tr": "Web Soketleri"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "GraphQL",
+                "ky": "GraphQL",
+                "ru": "GraphQL",
+                "tr": "GraphQL"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "REST API",
+                "ky": "REST API",
+                "ru": "REST API",
+                "tr": "REST API"
+            }
+        ]
+    },
+    {
+        "id": "007",
+        "en": "Storage",
+        "ky": "Сактоо",
+        "ru": "Хранение данных",
+        "tr": "Depolama",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "SQLite",
+                "ky": "SQLite",
+                "ru": "SQLite",
+                "tr": "SQLite"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Shared Preferences",
+                "ky": "Shared Preferences",
+                "ru": "Shared Preferences",
+                "tr": "Shared Preferences"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Hive",
+                "ky": "Hive",
+                "ru": "Hive",
+                "tr": "Hive"
+            }
+        ]
+    },
+    {
+        "id": "008",
+        "en": "Firebase",
+        "ky": "Firebase",
+        "ru": "Firebase",
+        "tr": "Firebase",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Firebase",
+                "ky": "Firebase",
+                "ru": "Firebase",
+                "tr": "Firebase"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Authentication",
+                "ky": "Аутентификация",
+                "ru": "Аутентификация",
+                "tr": "Kimlik Doğrulama"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Firestore",
+                "ky": "Firestore",
+                "ru": "Firestore",
+                "tr": "Firestore"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Storage",
+                "ky": "Сактоо",
+                "ru": "Хранение данных",
+                "tr": "Depolama"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Push Notifications",
+                "ky": "Push-билдирүүлөр",
+                "ru": "Push-уведомления",
+                "tr": "Anlık Bildirimler"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Remote Config",
+                "ky": "Remote конфигурациясы",
+                "ru": "Удаленная конфигурация",
+                "tr": "Uzaktan Yapılandırma"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Firebase Cloud Functions",
+                "ky": "Firebase Cloud функциялары",
+                "ru": "Firebase Cloud функции",
+                "tr": "Firebase Cloud Fonksiyonları"
+            }
+        ]
+    },
+    {
+        "id": "009",
+        "en": "State Management",
+        "ky": "Статус башкаруу",
+        "ru": "Управление состоянием",
+        "tr": "Durum Yönetimi",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Riverpod",
+                "ky": "Riverpod",
+                "ru": "Riverpod",
+                "tr": "Riverpod"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "BloC",
+                "ky": "BloC",
+                "ru": "BloC",
+                "tr": "BloC"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Provider",
+                "ky": "Provider",
+                "ru": "Provider",
+                "tr": "Provider"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "RxDart",
+                "ky": "RxDart",
+                "ru": "RxDart",
+                "tr": "RxDart"
+            }
+        ]
+    },
+    {
+        "id": "010",
+        "en": "Advanced Dart",
+        "ky": "Жогорку Dart",
+        "ru": "Продвинутый Dart",
+        "tr": "Gelişmiş Dart",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Lists",
+                "ky": "Тизмелер",
+                "ru": "Списки",
+                "tr": "Listeler"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Collections",
+                "ky": "Коллекции",
+                "ru": "Коллекции",
+                "tr": "Koleksiyonlar"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Lambdas",
+                "ky": "Лямбда функциялар",
+                "ru": "Лямбда-выражения",
+                "tr": "Lambdalar"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Functional Programming",
+                "ky": "Функционалдык программалау",
+                "ru": "Функциональное программирование",
+                "tr": "Fonksiyonel Programlama"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Isolates",
+                "ky": "Изоляциялар",
+                "ru": "Изоляты",
+                "tr": "İzolatlar"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Async Await",
+                "ky": "Асинк-бекардоо",
+                "ru": "Асинхронность и ожидание",
+                "tr": "Async Await"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Streams",
+                "ky": "Стримдер",
+                "ru": "Потоки",
+                "tr": "Akışlar"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Futures",
+                "ky": "Futures",
+                "ru": "Futures",
+                "tr": "Futures"
+            }
+        ]
+    },
+    {
+        "id": "011",
+        "en": "Animations",
+        "ky": "Анимациялар",
+        "ru": "Анимации",
+        "tr": "Animasyonlar",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Hero",
+                "ky": "Hero",
+                "ru": "Hero",
+                "tr": "Hero"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Opacity",
+                "ky": "Тунук эмес",
+                "ru": "Непрозрачность",
+                "tr": "Opaklık"
+            }
+        ]
+    },
+    {
+        "id": "012",
+        "en": "Testing",
+        "ky": "Тесттеңиздөө",
+        "ru": "Тестирование",
+        "tr": "Test Etme",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Unit Testing",
+                "ky": "Бөлүктөөн тесттеңиздөө",
+                "ru": "Модульное тестирование",
+                "tr": "Birim Testi"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Widget Testing",
+                "ky": "Виджеттин тесттеңиздөөсү",
+                "ru": "Тестирование виджетов",
+                "tr": "Widget Testi"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Integration Testing",
+                "ky": "Интеграциялуу тесттеңиздөө",
+                "ru": "Интеграционное тестирование",
+                "tr": "Entegrasyon Testi"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "TDD",
+                "ky": "TDD",
+                "ru": "TDD",
+                "tr": "TDD"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "BDD",
+                "ky": "BDD",
+                "ru": "BDD",
+                "tr": "BDD"
+            }
+        ]
+    },
+    {
+        "id": "013",
+        "en": "Deployment",
+        "ky": "Жүктөө",
+        "ru": "Развёртывание",
+        "tr": "Dağıtım",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Appstore",
+                "ky": "Appstore",
+                "ru": "Appstore",
+                "tr": "Appstore"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Playstore",
+                "ky": "Playstore",
+                "ru": "Playstore",
+                "tr": "Playstore"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Guidelines and Protocols",
+                "ky": "Жүйөлөрдүн жөнөтү",
+                "ru": "Руководства и протоколы",
+                "tr": "Kılavuzlar ve Protokoller"
+            }
+        ]
+    },
+    {
+        "id": "014",
+        "en": "CI/CD",
+        "ky": "CI/CD",
+        "ru": "CI/CD",
+        "tr": "CI/CD",
+        "svgUrl": null,
+        "articles": [
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Fast lane",
+                "ky": "Fast lane",
+                "ru": "Fast lane",
+                "tr": "Fast lane"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Codemagic",
+                "ky": "Codemagic",
+                "ru": "Codemagic",
+                "tr": "Codemagic"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Bitrise",
+                "ky": "Bitrise",
+                "ru": "Bitrise",
+                "tr": "Bitrise"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "en": "Github Actions",
+                "ky": "Github Actions",
+                "ru": "Github Actions",
+                "tr": "Github Actions"
+            },
+            {
+                "id": [
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg",
+                    "WaMmg"
+                ],
+                "name": "Firebase App Distribution",
+                "en": "Firebase App Distribution",
+                "ky": "Firebase App Distribution",
+                "ru": "Firebase App Distribution",
+                "tr": "Firebase App Distribution"
+            }
+        ]
+    }
+]
