@@ -1,5 +1,5 @@
 export 'auth/auth.dart';
-export 'chat/chat.dart';
+export 'topics/topics.dart';
 export 'home/home.dart';
 export 'main/main.dart';
 export 'settings/settings.dart';
