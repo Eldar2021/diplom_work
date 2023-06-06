@@ -67,19 +67,15 @@ class TopicsListView extends StatelessWidget {
               ],
             ),
             onTap: () {
-              // Navigator.push<void>(
-              //   context,
-              //   MaterialPageRoute<void>(
-              //     builder: (BuildContext context) => BlocProvider(
-              //       create: (context) => DetailCubit(
-              //         context.read<ApiService>(),
-              //         article.ids[context.read<HomeCubit>().state.myLocale.index],
-              //         context.read<HomeCubit>().state.myLocale,
-              //       )..getData(),
-              //       child: const HomeDetailView(),
-              //     ),
-              //   ),
-              // );
+              Navigator.push<void>(
+                context,
+                MaterialPageRoute<void>(
+                  builder: (BuildContext context) => BlocProvider(
+                    create: (context) => TopicDetailCubit(context.read<ApiService>(), topic.id)..getData(),
+                    child: const TopicDetailView(),
+                  ),
+                ),
+              );
             },
           ),
         );
