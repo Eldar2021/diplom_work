@@ -41,13 +41,31 @@ class TopicsListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      padding: const EdgeInsets.fromLTRB(14, 25, 14, 90),
+      padding: const EdgeInsets.fromLTRB(14, 15, 14, 90),
       itemCount: topics.length,
       itemBuilder: (BuildContext context, int index) {
         final topic = topics[index];
         return Card(
+          margin: const EdgeInsets.only(top: 20),
           child: ListTile(
-            title: Text(topic.title),
+            isThreeLine: true,
+            minVerticalPadding: 10,
+            title: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Expanded(child: Text(topic.title)),
+                const SizedBox(width: 10),
+                Text(topic.locale),
+              ],
+            ),
+            subtitle: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text('\n${topic.authorName}'),
+                const SizedBox(width: 10),
+                Text('\n${topic.displayDateTime}'),
+              ],
+            ),
             onTap: () {
               // Navigator.push<void>(
               //   context,

@@ -1,3 +1,5 @@
+import 'package:intl/intl.dart';
+
 class Topic {
   const Topic({
     required this.id,
@@ -36,4 +38,6 @@ class Topic {
   final String authorEmail;
   final String dateTime;
   final String locale;
+
+  String get displayDateTime => DateFormat('d/M/y  H:m').format(DateTime.parse(dateTime));
 }
