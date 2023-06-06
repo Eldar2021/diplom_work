@@ -17,16 +17,12 @@ class HomeView extends StatelessWidget {
     return Scaffold(
       body: BlocBuilder<HomeCubit, HomeState>(
         builder: (context, state) {
-          switch (state.fetchStatus) {
-            case FetchStatus.initial:
-              return const InitialWidget();
-            case FetchStatus.loading:
-              return const LoadingWidget();
-            case FetchStatus.success:
-              return HomeSuccesView(state.contents ?? []);
-            case FetchStatus.fail:
-              return const CustomErrorWidget();
-          }
+          return switch (state.fetchStatus) {
+            FetchStatus.initial => const InitialWidget(),
+            FetchStatus.loading => const LoadingWidget(),
+            FetchStatus.success => HomeSuccesView(state.contents ?? []),
+            FetchStatus.fail => const CustomErrorWidget(),
+          };
         },
       ),
     );

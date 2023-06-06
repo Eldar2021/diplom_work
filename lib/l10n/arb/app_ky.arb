@@ -3,7 +3,7 @@
     "hi": "Салам",
     "hello": "Саламатсызбы",
     "home": "Башкы бет",
-    "ai": "ИИ",
+    "subjectCatalog": "Тема Каталогу",
     "profile": "Профиль",
     "someError": "Ката барды",
     "pleaseTryAgain": "Кайра буйрук бериңиз",
@@ -26,6 +26,6 @@
     "contactUs": "Биз менен байланыш",
     "forDevelopers": "Иштеп чыгуучулар үчүн",
     "themeInstallation": "Тема орнотуу",
-    "aboutUsBody": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "aboutUsBody": "\tLearn World мобилдик аппликациясы, маалыматка жетүүгө жардам берүү менен колдонуучуларга кызыктуу жана сапалы макалаларга чоң эркиндикке ирешет тургандарын текшерүү үчүн өзгөртүлгөн.\nМаксатымыз, өзгөчөлүктөрдүн мамлекеттеги эксперттери тарабынан жазылган өзара темалык макалаларды бириктирүү аркылуу колдонуучуларыбызга кызыктуу маалымат жайлы толук баштапкын сунуштоо. Learn World мобилдик аппликациясы колдонуучуларга кызыктуу жана жеткиликтүү тез карап көрүү үчүн колдонуучу доскулары менен жолу менен жүргүзүлөт.\nМаалыматка кол алуу алымдары туураан чукулат! Learn World мобилдик аппликациясы аркылуу сиз жеке тарабыңыздагы темада дериндиктүү маалыматка жана билгилүү энциклопедияка жакынча кирүү мүмкүнчүлүк берет. Биздин миссиямыз - колдонуучуларга маалыматка жылдам жана сынайылуу алуу мүмкүнчүлүк берүү, алардын билмегини жеңилдетүү жардам берүүдү көрсөтүү.\nLearn World мобилдик аппликациясын колдонуу аркылуу маалыматка ачык капиларды ачып, көрүү менен баштапка! Learn World аппликациясын колдонуңуз жана көрүңүз, билгинин даңктамасын кеңейтип, жана жаңыртып окуу үчүн белгилөө үчүн.\nБизге жардам берүүгө, биздин Learn World колдонуп баштаганыңыз үчүн рахмат!",
     "forDevelopersBody": "The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from de Finibus Bonorum et Malorum by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham"
 }
