@@ -21,8 +21,4 @@ class TopicsCubit extends Cubit<TopicsState> {
     if (topics == null) return emit(state.copyWith(fetchStatus: FetchStatus.fail, stutus: status));
     emit(state.copyWith(topics: topics, stutus: status, fetchStatus: FetchStatus.success));
   }
-
-  // void changeLocale(MyLocale myLocale) {
-  //   emit(state.copyWith(myLocale: myLocale));
-  // }
 }
