@@ -84,7 +84,7 @@ class HomeSuccesView extends StatelessWidget {
                                   article.ids[context.read<HomeCubit>().state.myLocale.index],
                                   context.read<HomeCubit>().state.myLocale,
                                 )..getData(),
-                                child: const HomeDetailView(),
+                                child: HomeDetailView(article.getName(homeCubit.state.myLocale)),
                               ),
                             ),
                           );
