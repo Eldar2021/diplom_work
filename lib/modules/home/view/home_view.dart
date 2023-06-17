@@ -80,7 +80,7 @@ class HomeSuccesView extends StatelessWidget {
                             MaterialPageRoute<void>(
                               builder: (BuildContext context) => BlocProvider(
                                 create: (context) => DetailCubit(
-                                  context.read<ApiService>(),
+                                  context.read<FetchMdService>(),
                                   article.ids[context.read<HomeCubit>().state.myLocale.index],
                                   context.read<HomeCubit>().state.myLocale,
                                 )..getData(),
