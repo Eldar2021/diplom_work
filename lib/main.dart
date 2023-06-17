@@ -26,6 +26,7 @@ void main() async {
         RepositoryProvider(create: (context) => AuthService(auth, googleSign, pref)),
         RepositoryProvider(create: (context) => ApiService()),
         RepositoryProvider(create: (context) => AppService(pref)),
+        RepositoryProvider(create: (context) => FetchMdService(pref, RepositoryProvider.of<ApiService>(context))),
       ],
       child: const MyApp(),
     ),
