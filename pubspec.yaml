@@ -34,7 +34,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   very_good_analysis: ^5.0.0+1
-  # flutter_launcher_icons: ^0.13.1
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -67,11 +67,11 @@ flutter_gen:
   #         weight: 700
 
 flutter_launcher_icons:
-  android: "launcher_icon"
+  android: "ic_launcher"
   ios: true
   image_path: "assets/icons/logo.png"
-  adaptive_icon_background: "assets/icons/logo_bg.png"
+  adaptive_icon_background: "#f2f7ff"
   adaptive_icon_foreground: "assets/icons/logo.png"
   min_sdk_android: 21 # android min sdk min:16, default 21
-  remove_alpha_ios: true
+  # remove_alpha_ios: true
   # flutter pub run flutter_launcher_icons
