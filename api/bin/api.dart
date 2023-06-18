@@ -1,8 +1,8 @@
 import 'package:api/api.dart';
 
 void main() async {
-  final filePath = './data/tr/008';
-  for (var i = 1; i < 8; i++) {
+  final filePath = './data/tr/009';
+  for (var i = 1; i < 5; i++) {
     await createPaste(
       uploadFile: '$filePath/$i.md',
       downloadFile: '$filePath/links.md',
