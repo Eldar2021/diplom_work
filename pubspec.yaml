@@ -26,6 +26,7 @@ dependencies:
   markdown_widget: ^2.2.0
   url_launcher: ^6.1.11
   font_awesome_flutter: ^10.4.0
+  # flutter_native_splash: ^2.3.1
 
 dev_dependencies:
   build_runner: ^2.4.5
@@ -33,6 +34,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   very_good_analysis: ^5.0.0+1
+  # flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
@@ -63,3 +65,13 @@ flutter_gen:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icons/logo.png"
+  adaptive_icon_background: "assets/icons/logo_bg.png"
+  adaptive_icon_foreground: "assets/icons/logo.png"
+  min_sdk_android: 21 # android min sdk min:16, default 21
+  remove_alpha_ios: true
+  # flutter pub run flutter_launcher_icons
