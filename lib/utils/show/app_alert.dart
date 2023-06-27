@@ -5,6 +5,8 @@ import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/theme/theme.dart';
 
 class AppAlert {
+  const AppAlert._();
+
   static Future<T?> showDialog<T>(
     BuildContext context, {
     Widget? title,

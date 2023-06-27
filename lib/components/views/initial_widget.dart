@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:learn_world/l10n/l10n.dart';
 
+@immutable
 class InitialWidget extends StatelessWidget {
   const InitialWidget({super.key});
 

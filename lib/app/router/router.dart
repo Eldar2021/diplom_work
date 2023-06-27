@@ -6,17 +6,17 @@ import 'package:learn_world/modules/modules.dart';
 class AppRouter {
   const AppRouter._();
 
-  static const String main = '/';
-  static const String mainHome = '/main-home';
-  static const String home = '/home';
-  static const String login = '/login';
-  static const String settingsView = '/settings';
-  static const String profile = '/profile';
-  static const String language = '/language';
-  static const String theme = '/theme';
-  static const String developers = '/developers';
-  static const String aboutUs = '/about-us';
-  static const String topics = '/topics';
+  static const main = '/';
+  static const mainHome = '/main-home';
+  static const home = '/home';
+  static const login = '/login';
+  static const settingsView = '/settings';
+  static const profile = '/profile';
+  static const language = '/language';
+  static const theme = '/theme';
+  static const developers = '/developers';
+  static const aboutUs = '/about-us';
+  static const topics = '/topics';
 
   static Route<void> onGenerateRoute(RouteSettings settings, User? user) {
     return switch (settings.name) {

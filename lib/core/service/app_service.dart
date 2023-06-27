@@ -6,12 +6,13 @@ import 'package:learn_world/constants/constants.dart';
 import 'package:learn_world/theme/theme.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class AppService {
+@immutable
+final class AppService {
   const AppService(this.preferences);
 
   final SharedPreferences preferences;
 
-  (Locale, CustomTheme) init() {
+  (Locale, CustomTheme) get init {
     final localeCode = preferences.getString(AppKeys.localeKey);
     final isDark = preferences.getBool(AppKeys.themeModeKey) ?? false;
     final colorIndex = preferences.getInt(AppKeys.themeColorKey) ?? 0;
