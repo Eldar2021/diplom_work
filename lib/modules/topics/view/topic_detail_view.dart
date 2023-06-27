@@ -4,18 +4,17 @@ import 'package:markdown_widget/markdown_widget.dart';
 
 import 'package:learn_world/components/components.dart';
 import 'package:learn_world/core/core.dart';
-import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/modules/modules.dart';
 
 class TopicDetailView extends StatelessWidget {
-  const TopicDetailView({super.key});
+  const TopicDetailView(this.title, {super.key});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(context.l10n.hi),
-      ),
+      appBar: AppBar(title: Text(title)),
       body: BlocBuilder<TopicDetailCubit, TopicDetailState>(
         builder: (context, state) {
           return switch (state.fetchStatus) {
