@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:learn_world/theme/theme.dart';
 
-class CustomTheme with CompomnentTheme {
+@immutable
+final class CustomTheme with CompomnentTheme {
   const CustomTheme(this.brightness, this.targetColor);
 
   final Brightness brightness;
@@ -11,7 +12,7 @@ class CustomTheme with CompomnentTheme {
     return ColorScheme.fromSeed(seedColor: targetColor, brightness: brightness);
   }
 
-  ThemeData light() {
+  ThemeData get light {
     final scheme = colors();
     return ThemeData.light().copyWith(
       colorScheme: scheme,
@@ -31,7 +32,7 @@ class CustomTheme with CompomnentTheme {
     );
   }
 
-  ThemeData dark() {
+  ThemeData get dark {
     final scheme = colors();
     return ThemeData.dark().copyWith(
       colorScheme: scheme,
@@ -47,7 +48,7 @@ class CustomTheme with CompomnentTheme {
     );
   }
 
-  ThemeData get themeData => brightness == Brightness.dark ? dark() : light();
+  ThemeData get themeData => brightness == Brightness.dark ? dark : light;
 
   CustomTheme copyWith({Brightness? brightness, Color? targetColor}) {
     return CustomTheme(brightness ?? this.brightness, targetColor ?? this.targetColor);

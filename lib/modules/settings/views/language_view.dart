@@ -41,17 +41,12 @@ class LanguageView extends StatelessWidget {
   }
 
   String getLocaleName(Locale locale) {
-    switch (locale.languageCode) {
-      case 'en':
-        return 'English';
-      case 'ky':
-        return 'Кыргызча';
-      case 'tr':
-        return 'Türkçe';
-      case 'ru':
-        return 'Русский';
-      default:
-        return 'English';
-    }
+    return switch (locale.languageCode) {
+      'en' => 'English',
+      'ky' => 'Кыргызча',
+      'tr' => 'Türkçe',
+      'ru' => 'Русский',
+      _ => 'English',
+    };
   }
 }

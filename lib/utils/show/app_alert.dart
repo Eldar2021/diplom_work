@@ -5,6 +5,8 @@ import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/theme/theme.dart';
 
 class AppAlert {
+  const AppAlert._();
+
   static Future<T?> showDialog<T>(
     BuildContext context, {
     Widget? title,
@@ -61,11 +63,11 @@ class AppAlert {
           actions: <Widget>[
             CupertinoButton(
               onPressed: onCancel ?? () => Navigator.pop(context),
-              child: Text(context.l10n.next),
+              child: Text(context.l10n.no),
             ),
             CupertinoButton(
               onPressed: onOK,
-              child: Text(context.l10n.ok),
+              child: Text(context.l10n.yes),
             ),
           ],
         );

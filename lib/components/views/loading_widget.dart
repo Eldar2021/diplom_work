@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 
+@immutable
 class LoadingWidget extends StatelessWidget {
   const LoadingWidget({super.key});
 
