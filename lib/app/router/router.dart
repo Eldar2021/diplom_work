@@ -4,7 +4,7 @@ import 'package:learn_world/models/models.dart';
 import 'package:learn_world/modules/modules.dart';
 
 class AppRouter {
-  const AppRouter();
+  const AppRouter._();
 
   static const String main = '/';
   static const String mainHome = '/main-home';
@@ -19,34 +19,18 @@ class AppRouter {
   static const String topics = '/topics';
 
   static Route<void> onGenerateRoute(RouteSettings settings, User? user) {
-    switch (settings.name) {
-      case main:
-        return CupertinoPageRoute(
-          builder: (_) {
-            if (user != null) return const MainView();
-            return const LoginView();
-          },
-        );
-      case mainHome:
-        return CupertinoPageRoute(builder: (_) => const MainView());
-      case home:
-        return CupertinoPageRoute(builder: (_) => const HomeView());
-      case login:
-        return CupertinoPageRoute(builder: (_) => const LoginView());
-      case settingsView:
-        return CupertinoPageRoute(builder: (_) => const SettingsView());
-      case language:
-        return CupertinoPageRoute(builder: (_) => const LanguageView());
-      case theme:
-        return CupertinoPageRoute(builder: (_) => const ThemeView());
-      case developers:
-        return CupertinoPageRoute(builder: (_) => const DevelopersView());
-      case aboutUs:
-        return CupertinoPageRoute(builder: (_) => const AboutUsVuew());
-      case topics:
-        return CupertinoPageRoute(builder: (_) => const TopicsView());
-      default:
-        throw Exception('no builder specified for route named: [${settings.name}]');
-    }
+    return switch (settings.name) {
+      main => CupertinoPageRoute(builder: (_) => user != null ? const MainView() : const LoginView()),
+      mainHome => CupertinoPageRoute(builder: (_) => const MainView()),
+      home => CupertinoPageRoute(builder: (_) => const HomeView()),
+      login => CupertinoPageRoute(builder: (_) => const LoginView()),
+      settingsView => CupertinoPageRoute(builder: (_) => const SettingsView()),
+      language => CupertinoPageRoute(builder: (_) => const LanguageView()),
+      theme => CupertinoPageRoute(builder: (_) => const ThemeView()),
+      developers => CupertinoPageRoute(builder: (_) => const DevelopersView()),
+      aboutUs => CupertinoPageRoute(builder: (_) => const AboutUsVuew()),
+      topics => CupertinoPageRoute(builder: (_) => const TopicsView()),
+      _ => throw Exception('No builder specified for route named: [${settings.name}]'),
+    };
   }
 }

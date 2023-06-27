@@ -17,16 +17,12 @@ class HomeDetailView extends StatelessWidget {
       appBar: AppBar(title: Text(title)),
       body: BlocBuilder<DetailCubit, DetailState>(
         builder: (context, state) {
-          switch (state.fetchStatus) {
-            case FetchStatus.initial:
-              return const InitialWidget();
-            case FetchStatus.loading:
-              return const LoadingWidget();
-            case FetchStatus.success:
-              return DetailSuccessView(state.mdFile ?? '');
-            case FetchStatus.fail:
-              return const CustomErrorWidget();
-          }
+          return switch (state.fetchStatus) {
+            FetchStatus.initial => const InitialWidget(),
+            FetchStatus.loading => const LoadingWidget(),
+            FetchStatus.success => DetailSuccessView(state.mdFile ?? ''),
+            FetchStatus.fail => const CustomErrorWidget(),
+          };
         },
       ),
     );
