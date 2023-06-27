@@ -63,11 +63,11 @@ class AppAlert {
           actions: <Widget>[
             CupertinoButton(
               onPressed: onCancel ?? () => Navigator.pop(context),
-              child: Text(context.l10n.next),
+              child: Text(context.l10n.no),
             ),
             CupertinoButton(
               onPressed: onOK,
-              child: Text(context.l10n.ok),
+              child: Text(context.l10n.yes),
             ),
           ],
         );
