@@ -3,7 +3,10 @@ import 'package:http/http.dart' as http;
 
 const String baseUrl = 'https://paste.rs/';
 
-Future<String> createPaste({required String uploadFile, required String downloadFile}) async {
+Future<String> createPaste({
+  required String uploadFile,
+  required String downloadFile,
+}) async {
   final data = await File(uploadFile).readAsString();
   final response = await http.post(Uri.parse(baseUrl), body: data);
 
@@ -18,7 +21,10 @@ Future<String> createPaste({required String uploadFile, required String download
   }
 }
 
-Future<void> getPaste({required String id, required String fileName}) async {
+Future<void> getPaste({
+  required String id,
+  required String fileName,
+}) async {
   final response = await http.get(Uri.parse('$baseUrl$id'));
 
   if (response.statusCode == 200) {
