@@ -1,11 +1,13 @@
 import 'dart:convert';
 import 'dart:io';
 
+import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
 typedef FromJson<T> = T Function(Map<String, dynamic>);
 
-class ApiService {
+@immutable
+final class ApiService {
   ApiService({http.Client? client}) : _client = client ?? http.Client();
 
   final http.Client _client;
@@ -14,9 +16,7 @@ class ApiService {
     try {
       final uri = Uri.parse(url);
       final response = await _client.get(uri);
-      if (response.statusCode != HttpStatus.ok) {
-        return (null, '${response.statusCode}');
-      }
+      if (response.statusCode != HttpStatus.ok) return (null, '${response.statusCode}');
       return (response.body, '${response.statusCode}');
     } catch (e, s) {
       return (null, s.toString());
@@ -27,9 +27,7 @@ class ApiService {
     try {
       final uri = Uri.parse(url);
       final response = await _client.get(uri, headers: _getRequestHeaders());
-      if (response.statusCode != HttpStatus.ok) {
-        return (null, '${response.statusCode}');
-      }
+      if (response.statusCode != HttpStatus.ok) return (null, '${response.statusCode}');
       return (response.decode<T>(), '${response.statusCode}');
     } catch (e, s) {
       return (null, s.toString());
@@ -73,7 +71,8 @@ extension on http.Response {
   }
 }
 
-class HttpRequestException implements Exception {
+@immutable
+final class HttpRequestException implements Exception {
   const HttpRequestException({this.error, this.stackTrace, this.statusCode});
 
   final dynamic error;
@@ -81,14 +80,16 @@ class HttpRequestException implements Exception {
   final int? statusCode;
 }
 
-class JsonDecodeException implements Exception {
+@immutable
+final class JsonDecodeException implements Exception {
   const JsonDecodeException({this.error, this.stackTrace});
 
   final dynamic error;
   final StackTrace? stackTrace;
 }
 
-class JsonDeserializationException implements Exception {
+@immutable
+final class JsonDeserializationException implements Exception {
   const JsonDeserializationException({this.error, this.stackTrace});
 
   final dynamic error;

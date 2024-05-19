@@ -8,7 +8,7 @@ import 'package:learn_world/theme/theme.dart';
 part 'app_state.dart';
 
 class AppCubit extends Cubit<AppState> {
-  AppCubit(this.appService) : super(AppState(appService.init().$1, appService.init().$2));
+  AppCubit(this.appService) : super(AppState(appService.init.$1, appService.init.$2));
 
   final AppService appService;
 

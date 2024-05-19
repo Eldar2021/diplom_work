@@ -1,9 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:learn_world/constants/constants.dart';
 import 'package:learn_world/core/core.dart';
 
-class FetchMdService {
+@immutable
+final class FetchMdService {
   const FetchMdService(this.preferences, this.apiService);
 
   final SharedPreferences preferences;

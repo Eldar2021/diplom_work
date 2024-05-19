@@ -4,30 +4,25 @@ import 'package:markdown_widget/markdown_widget.dart';
 
 import 'package:learn_world/components/components.dart';
 import 'package:learn_world/core/core.dart';
-import 'package:learn_world/l10n/l10n.dart';
 import 'package:learn_world/modules/modules.dart';
 
 class TopicDetailView extends StatelessWidget {
-  const TopicDetailView({super.key});
+  const TopicDetailView(this.title, {super.key});
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(context.l10n.hi),
-      ),
+      appBar: AppBar(title: Text(title)),
       body: BlocBuilder<TopicDetailCubit, TopicDetailState>(
         builder: (context, state) {
-          switch (state.fetchStatus) {
-            case FetchStatus.initial:
-              return const InitialWidget();
-            case FetchStatus.loading:
-              return const LoadingWidget();
-            case FetchStatus.success:
-              return TopicDetaiSuccess(state.mdFile ?? '');
-            case FetchStatus.fail:
-              return const CustomErrorWidget();
-          }
+          return switch (state.fetchStatus) {
+            FetchStatus.initial => const InitialWidget(),
+            FetchStatus.loading => const LoadingWidget(),
+            FetchStatus.success => TopicDetaiSuccess(state.mdFile ?? ''),
+            FetchStatus.fail => const CustomErrorWidget(),
+          };
         },
       ),
     );

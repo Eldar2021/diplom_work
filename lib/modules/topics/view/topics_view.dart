@@ -69,7 +69,7 @@ class TopicsListView extends StatelessWidget {
                 MaterialPageRoute<void>(
                   builder: (BuildContext context) => BlocProvider(
                     create: (context) => TopicDetailCubit(context.read<FetchMdService>(), topic.id)..getData(),
-                    child: const TopicDetailView(),
+                    child: TopicDetailView(topic.title),
                   ),
                 ),
               );

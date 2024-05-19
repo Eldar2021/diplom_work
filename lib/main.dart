@@ -12,9 +12,7 @@ import 'package:learn_world/app/app.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
   final pref = await SharedPreferences.getInstance();
   final auth = FirebaseAuth.instance;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+@immutable
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key, this.text = 'Button', this.onPressed});
 
@@ -19,6 +20,7 @@ class CustomButton extends StatelessWidget {
   }
 }
 
+@immutable
 class CustomButtonWithIcon extends StatelessWidget {
   const CustomButtonWithIcon({
     required this.icon,

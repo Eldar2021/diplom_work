@@ -7,7 +7,7 @@ import 'package:learn_world/models/models.dart';
 part 'auth_state.dart';
 
 class AuthCubit extends Cubit<AuthState> {
-  AuthCubit(this.authService) : super(AuthState(user: authService.init()));
+  AuthCubit(this.authService) : super(AuthState(user: authService.init));
 
   final AuthService authService;
 

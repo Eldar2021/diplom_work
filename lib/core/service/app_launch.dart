@@ -3,7 +3,10 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class AppLaunch {
+@immutable
+final class AppLaunch {
+  const AppLaunch._();
+
   static Future<void> sendEmail(String email, {String? snackBarText, BuildContext? context}) async {
     try {
       final isSuccess = await launchUrl(Uri(scheme: 'mailto', path: email));
