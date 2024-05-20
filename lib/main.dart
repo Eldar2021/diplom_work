@@ -16,7 +16,10 @@ void main() async {
 
   final pref = await SharedPreferences.getInstance();
   final auth = FirebaseAuth.instance;
-  final googleSign = GoogleSignIn();
+  final googleSign = GoogleSignIn(
+    scopes: ['email', 'profile'],
+    hostedDomain: '',
+  );
 
   runApp(
     MultiRepositoryProvider(

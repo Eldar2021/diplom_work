@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/foundation.dart';
@@ -28,28 +29,33 @@ final class AuthService {
   }
 
   Future<(md.User?, String?)> signInWithGoogle() async {
-    final googleUser = await google.signIn();
-    final googleAuth = await googleUser?.authentication;
+    try {
+      final googleUser = await google.signIn();
+      final googleAuth = await googleUser?.authentication;
 
-    // Create a new credential
-    final credential = GoogleAuthProvider.credential(
-      accessToken: googleAuth?.accessToken,
-      idToken: googleAuth?.idToken,
-    );
-
-    // Once signed in, return the UserCredential
-    final userCredential = await auth.signInWithCredential(credential);
-    if (userCredential.user != null) {
-      final user = md.User(
-        uid: userCredential.user!.uid,
-        email: userCredential.user?.email,
-        phoneNumber: userCredential.user?.phoneNumber,
-        photoUrl: userCredential.user?.photoURL,
-        displayName: userCredential.user?.displayName,
+      // Create a new credential
+      final credential = GoogleAuthProvider.credential(
+        accessToken: googleAuth?.accessToken,
+        idToken: googleAuth?.idToken,
       );
-      await preferences.setString(AppKeys.userCacheKey, jsonEncode(user.toJson()));
-      return (user, null);
-    } else {
+
+      // Once signed in, return the UserCredential
+      final userCredential = await auth.signInWithCredential(credential);
+      if (userCredential.user != null) {
+        final user = md.User(
+          uid: userCredential.user!.uid,
+          email: userCredential.user?.email,
+          phoneNumber: userCredential.user?.phoneNumber,
+          photoUrl: userCredential.user?.photoURL,
+          displayName: userCredential.user?.displayName,
+        );
+        await preferences.setString(AppKeys.userCacheKey, jsonEncode(user.toJson()));
+        return (user, null);
+      } else {
+        return (null, '401');
+      }
+    } catch (e) {
+      log(e.toString());
       return (null, '401');
     }
   }
